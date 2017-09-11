@@ -9,7 +9,7 @@
 #Version 1.0
 
 #基础镜像
-FROM centos:7.2.1611
+FROM centos:7.2.1511
 
 #维护人
 MAINTAINER czwei2@iflytek.com
@@ -22,7 +22,7 @@ RUN yum install -y epel-release
 RUN yum install -y python-pip python-devel libffi-devel openssl-devel gcc python-setuptools git
 
 #docker
-RUN yum install docker
+RUN yum install -y docker
 RUN pip install docker-py
 
 
