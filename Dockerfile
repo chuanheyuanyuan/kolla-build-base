@@ -19,7 +19,7 @@ MAINTAINER czwei2@iflytek.com
 RUN yum install -y epel-release
 
 #install 
-RUN yum install -y python-pip gcc  git
+RUN yum install -y python-devel libffi-devel openssl-devel gcc python-setuptools tox  git
 
 
 
