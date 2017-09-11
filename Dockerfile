@@ -19,11 +19,8 @@ MAINTAINER czwei2@iflytek.com
 RUN yum install -y epel-release
 
 #install 
-RUN yum install -y python-pip python-devel libffi-devel openssl-devel gcc python-setuptools git
+RUN yum install -y python-pip  git
 
-#docker
-RUN yum install -y docker
-RUN pip install docker-py
 
 
 
