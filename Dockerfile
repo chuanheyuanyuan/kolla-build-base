@@ -15,11 +15,27 @@ FROM centos:7.2.1511
 MAINTAINER czwei2@iflytek.com
 
 ################### BEGIN INSTALLATION ######################
-#yum-repo
 RUN yum install -y epel-release
 
-#install 
-RUN yum install -y python-devel libffi-devel openssl-devel gcc python-setuptools tox  git
+RUN yum install -y python-devel libffi-devel openssl-devel gcc python-setuptools git python-pip
+
+RUN git clone https://github.com/openstack/kolla.git
+
+RUN curl -sSL https://get.docker.io | bash 
+
+RUN pip install -U tox
+
+RUN pip install kolla/
+
+WORKDIR  kolla/
+
+RUN pip install -r requirements.txt -r test-requirements.txt
+
+RUN tox -e genconfig
+
+#CMD sh -x start.sh
+
+
 
 
 
