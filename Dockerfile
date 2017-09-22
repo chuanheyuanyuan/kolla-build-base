@@ -33,10 +33,5 @@ RUN pip install -r requirements.txt -r test-requirements.txt
 
 RUN tox -e genconfig
 
-#CMD sh -x start.sh
-
-
-
-
 
 
