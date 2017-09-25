@@ -21,8 +21,6 @@ RUN yum install -y python-devel libffi-devel openssl-devel gcc python-setuptools
 
 RUN git clone https://github.com/openstack/kolla.git
 
-RUN curl -sSL https://get.docker.io | bash 
-
 RUN pip install -U tox
 
 RUN pip install kolla/
