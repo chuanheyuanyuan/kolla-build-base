@@ -9,7 +9,7 @@
 #Version 1.0
 
 #基础镜像
-FROM dev.reg.iflytek.com/develop/centos:7.2.1511
+FROM 172.16.59.153/base/centos:7.2.1511
 
 #维护人
 MAINTAINER czwei2@iflytek.com
