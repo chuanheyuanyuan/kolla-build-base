@@ -19,7 +19,7 @@ RUN yum install -y epel-release
 
 RUN yum install -y python-devel libffi-devel openssl-devel gcc python-setuptools git python-pip
 
-RUN git clone https://github.com/openstack/kolla.git
+RUN git clone http://172.16.59.151:80/czwei2/kolla.git
 
 RUN pip install -U tox
 
