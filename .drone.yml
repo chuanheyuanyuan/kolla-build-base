@@ -1,0 +1,9 @@
+pipeline:
+  publish:
+    image: plugins/docker
+    repo: 172.16.59.153/test/CI-kolla-build
+    username: admin 
+    password: Harbor12345 
+    registry: 172.16.59.153 
+    tag: latest
+    insecure: true 
